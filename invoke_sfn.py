@@ -1,9 +1,9 @@
+import json
+import uuid
 import sys
 import os
-sys.path.append(os.environ['WORKSPACE'])
+sys.path.append('/home/ubuntu/.local/lib/python3.6/site-packages')
 import boto3
-import uuid
-import json
 
 
 # define input content
