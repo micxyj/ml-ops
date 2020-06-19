@@ -18,3 +18,4 @@ response = sfn_client.start_execution(
     input=str(input_content).replace('\'', '\"')
 )
 print(response)
+print('Done')
