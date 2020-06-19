@@ -9,7 +9,6 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                sh 'export PYTHONPATH=$WORKSPACE:$PYTHONPATH'
                 sh 'python3 invoke_sfn.py'
             }
         }
