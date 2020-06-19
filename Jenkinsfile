@@ -9,7 +9,6 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                sh 'export PYTHONPATH=/home/ubuntu/.local/lib/python3.6/site-packages/'
                 sh 'python3 invoke_sfn.py'
             }
         }
