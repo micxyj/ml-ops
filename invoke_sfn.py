@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.environ['WORKSPACE'])
 import boto3
 import uuid
 import json
