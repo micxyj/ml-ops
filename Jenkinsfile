@@ -1,14 +1,10 @@
 pipeline {
-    agent { docker 'python:3.5.1' }
+    agent any
     stages {
         stage('build') {
             steps {
-                sh 'python3 --version'
-            }
-        }
-        stage('test') {
-            steps {
-                sh 'pwd'
+                sh 'chmod 777 build_and_push.sh'
+                sh './build_and_push.sh sagemaker-tf-cifar10-example'
             }
         }
     }
