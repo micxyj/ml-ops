@@ -9,6 +9,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
+                sh 'id'
                 sh 'python3 invoke_sfn.py'
             }
         }
