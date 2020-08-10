@@ -3,13 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'chmod 777 build_and_push.sh'
-                sh './build_and_push.sh sagemaker-tf-cifar10-example'
-            }
-        }
-        stage('deploy') {
-            steps {
-                sh 'python3 invoke_sfn.py'
+                awsCodeBuild projectName: 'push-to-ECR', credentialsType: 'keys', region: 'us-east-1', sourceControlType: 'project'
+                echo 'Done................'
             }
         }
     }
