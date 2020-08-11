@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                awsCodeBuild projectName: 'push-to-ECR', credentialsType: 'keys', region: 'us-east-1', sourceControlType: 'project'
+                awsCodeBuild projectName: 'your_project_name', credentialsType: 'keys', region: 'us-east-1', sourceControlType: 'project'
                 echo 'Done................'
             }
         }
